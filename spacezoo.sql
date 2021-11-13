@@ -20,6 +20,7 @@ VALUES
     ('Resonant breathing', 'breathing', 'Lie down, eyes shut, and breathe in slowly through your nose. Exhale slowly and repeat.', 'https://www.rosalbacourtney.com/resonance-frequency-breathing/#:~:text=Resonance%20frequency%20breathing%20is%20a,such%20as%20the%20circulatory%20system.'),
     ('Visiualization meditation', 'visualization', 'Picturing positive images and relaxing your body is a good way to meditate if you struggle with traditional meditation.', 'https://www.wellandgood.com/visualization-meditation/'),
     ('Happy Place visualization', 'visualization', 'Imagine a peaceful place, like a beach or the woods. Imagine with all your senses: how it sounds, how it feels, how it smells.', 'https://www.mondaycampaigns.org/destress-monday/find-happy-place'),
-    ('Music therapy', 'expression', 'Singing a song or playing an instrument is a great way to express your emotions and release stress.', 'https://www.healthline.com/health/sound-healing')
+    ('Music therapy', 'expression', 'Singing a song or playing an instrument is a great way to express your emotions and release stress.', 'https://www.healthline.com/health/sound-healing'),
+    ('Relaxing soundscapes', 'relaxation', 'A relaxing soundscape, whether it''s the beach, traffic, or birds chirping in the woods, can help put your mind at ease.', 'https://www.drjohnlapuma.com/naturetherapy/what-is-sound-or-music-therapy-what-are-soundscapes/'),
+    ('Self-reflection', 'reflection', 'Reflecting on what your priorities are and how you are working towards them can help you identify sources of stress and work towards reducing them.', 'https://www.skillsyouneed.com/ps/reflective-practice.html')
 ;
-SELECT * FROM SpaceZoo ORDER BY category DESC;
