@@ -7,11 +7,11 @@ source VARCHAR(200)
 
 INSERT INTO SpaceZoo
 VALUES
-    ('Art therapy', 'expression', 'Draw your emotions or express your feelings in a painting', 'https://www.healthline.com/health/mental-health/anxiety-drawing#:~:text=Art%20therapy%20refers%20to%20any,have%20trouble%20putting%20into%20words.'),
-    ('Therapeutic journaling', 'expression', 'Writing your way through your thoughts is a great way to reflect on your emotions and experiences', 'https://www.va.gov/WHOLEHEALTHLIBRARY/tools/therapeutic-journaling.asp'),
+    ('Art therapy', 'expression', 'Draw your emotions or express your feelings in a painting.', 'https://www.healthline.com/health/mental-health/anxiety-drawing#:~:text=Art%20therapy%20refers%20to%20any,have%20trouble%20putting%20into%20words.'),
+    ('Therapeutic journaling', 'expression', 'Writing your way through your thoughts is a great way to reflect on your emotions and experiences.', 'https://www.va.gov/WHOLEHEALTHLIBRARY/tools/therapeutic-journaling.asp'),
     ('Sand tray therapy', 'relaxation', 'Raking the sand of a mini zen garden gives you a way to express yourself and reduce tension.', 'https://www.healthyplace.com/blogs/anxiety-schmanxiety/2015/07/hey-kids-and-adults-play-with-sand-to-reduce-anxiety'),
-    ('Perfect day', 'visualization', 'What''s your idea of a perfect day? Reflecting an imagining on it can help you reduce stress.', 'https://projectlifemastery.com/design-your-perfect-day/'),
-    ('Reflect on your good traits', 'reflection', 'What are you good at? What do other people see in you? Reflect on your good traits to improve your self-image', 'https://www.healthyplace.com/blogs/buildingselfesteem/2015/10/identifying-your-good-qualities-when-you-believe-youre-worthless'),
+    ('Perfect day', 'visualization', 'What''s your idea of a perfect day? Reflecting on and imagining it can help you reduce stress.', 'https://projectlifemastery.com/design-your-perfect-day/'),
+    ('Reflect on your good traits', 'reflection', 'What are you good at? What do other people see in you? Reflect on your good traits to improve your self-image.', 'https://www.healthyplace.com/blogs/buildingselfesteem/2015/10/identifying-your-good-qualities-when-you-believe-youre-worthless'),
     ('Reflect on your gratitute', 'reflection', 'What are you thankful for? How can you express it?', 'https://resources.wellcertified.com/articles/practicing-gratitude-5-tips-for-positive-reflection/'),
     ('Progressive muscle relaxation', 'relaxation', 'Relax your muscles one group at a time, releasing your stress.', 'https://www.uofmhealth.org/health-library/uz2225'),
     ('Meditation', 'meditation', 'Meditation is one of the best ways to take a break a relax.', 'https://www.mindful.org/how-to-meditate/'),
