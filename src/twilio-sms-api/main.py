@@ -2,18 +2,20 @@
 from creds import ACCOUNT, TOKEN
 
 from twilio.rest import Client
+from sys import argv
 
 client = Client(ACCOUNT, TOKEN)
 
-# func send_sms(to, from, message)
+# func send_sms(to, from, message) 
 
 def send_sms(to, from_, message):
     message = client.messages.create(
-                     body="SpaceZoo.tech",
+                     body= argv[2],
                      from_='+15155178952',
-                     to='+19739807798'
+                     to= argv[1]
                  )
     return message
+
 send_sms('+19739807798','+15155178952',"SpaceZoo.tech")
 '''{ 
     "account_sid": ACCOUNT,
@@ -42,7 +44,7 @@ send_sms('+19739807798','+15155178952',"SpaceZoo.tech")
 print(message.sid)
 send_sms('+19739807798','+15155178952',"SpaceZoo.tech")'''
 
-
+'''
 # https://www.twilio.com/code-exchange/send-sms-message-twilio-phone-number
 # https://www.twilio.com/docs/sms/quickstart/python
 
@@ -56,4 +58,4 @@ send_sms('+19739807798','+15155178952',"SpaceZoo.tech")'''
 #         )
 # except twilio.TwilioRestException as e:
 #     print(e)    
-
+'''
