@@ -1,1 +1,0 @@
-python main.py 973-980-7798 "Check out space zoo!"
