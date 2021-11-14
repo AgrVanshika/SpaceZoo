@@ -62,6 +62,8 @@ func mainsite(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "header", nil)
 
+	tmpl.ExecuteTemplate(w)
+
 	tmpl.ExecuteTemplate(w, "end", nil)
 
 }
