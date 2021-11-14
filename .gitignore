@@ -1,4 +1,10 @@
-__pycache__
+# Python Gitignore stuff
+__pycache__/
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
 creds.py
 creds-*
 cockroachcreds.py
