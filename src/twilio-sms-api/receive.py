@@ -41,7 +41,7 @@ def sms_reply():
 def answer_call():
     resp = VoiceResponse()
     
-    #if the request already has digits, save them to choice and do this shit
+    #if the request already has digits, save them to choice get a random technique from the cockroach database via getRandomFromCategory
     if 'Digits' in request.values:
         choice = request.values['Digits']
 
@@ -69,12 +69,15 @@ def answer_call():
             technique = getRandomFromCategory('visualization')
             resp.say(f"You have chosen visualization. {technique[0]}. {technique[1]}")
             return(str(resp))
+        #if digit is not a valid menu option
         else:
             resp.say("Sorry, I didn't understand that choice.")
+    
+    #record the key pressed
     gather = Gather(numDigits=1)
     gather.say("Thank you for calling space zoo. For a breathing technique, press 1. For an espressive technique, press 2. For a meditation technique, press 3. For a reflection technique, press 4. For a relaxation technique, press 5. For a visualization technique, press 6.")
     resp.append(gather)
-    #loop!
+    #loop, keeps repeating if a valid option is not given
     resp.redirect('/voice')
     
     return str(resp)
