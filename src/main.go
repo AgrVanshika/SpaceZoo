@@ -217,6 +217,12 @@ func mainsite(w http.ResponseWriter, r *http.Request) {
 	tmpl.ExecuteTemplate(w, "end", nil)
 }
 
+func amongus(w http.ResponseWriter, r *http.Request) {
+
+	fmt.Fprintf(w, "/assets/website/img/logo")
+	// tmpl.ExecuteTemplate(w, "amongus", nil)
+}
+
 func webserver(port string) {
 	fmt.Printf("Server on port %s\n", port)
 
@@ -233,6 +239,8 @@ func webserver(port string) {
 	http.HandleFunc("/expression", expression)
 	http.HandleFunc("/breathing", breathing)
 	http.HandleFunc("/meditation", meditation)
+
+	http.HandleFunc("/amongus")
 
 	err := http.ListenAndServe(":"+port, nil)
 
