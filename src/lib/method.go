@@ -96,7 +96,16 @@ func ListMethods(category string) []Technique {
 		}
 	case "meditation":
 		return []Technique{
-			{},
+			{
+				Name:        "Meditation",
+				Description: "Meditation is one of the best ways to take a break a relax.",
+				Source:      "https://www.mindful.org/how-to-meditate/",
+			},
+			{
+				Name:        "Visiualization meditation",
+				Description: "Picturing positive images and relaxing your body is a good way to meditate if you struggle with traditional meditation.",
+				Source:      "https://www.wellandgood.com/visualization-meditation/",
+			},
 		}
 	case "breathing":
 		return []Technique{
