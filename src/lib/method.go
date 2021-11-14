@@ -1,8 +1,10 @@
 package lib
 
 import (
-	"fmt"
-	"os/exec"
+	"database/sql"
+	"log"
+
+	_ "github.com/lib/pq"
 )
 
 type Method struct {
@@ -14,7 +16,6 @@ type Method struct {
 
 type Technique struct {
 	Name        string
-	Category    string
 	Description string
 	Source      string
 }
@@ -24,13 +25,16 @@ func GetRandomFromCategory(category string) {
 	// PATH=$PATH:$(where python3)
 	// if linux
 	// PATH=$PATH:$(which python3)
-	cmd := exec.Command("python3", "cockroachdb/cliGetRandom.py", category)
-	out, err := cmd.Output()
-
+	// Connect to the "bank" database
+	// Attempt to connect
+	// config, err := pgx.ParseConfig(CONNSTRING)
+	// if err != nil {
+	// 	log.Fatal("error configuring the database: ", err)
+	// }
+	db, err := sql.Open("postgres", CONNSTRING)
 	if err != nil {
-		println(err.Error())
-		return
+		log.Fatal("error connecting to the database: ", err)
 	}
+	defer db.Close()
 
-	fmt.Println(string(out))
 }
