@@ -10,6 +10,8 @@ import (
 	"strconv"
 	"strings"
 	"text/template"
+
+	L "github.com/AOrps/spaceZoo/src/lib"
 )
 
 const PORT = 9990
@@ -62,7 +64,12 @@ func mainsite(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "header", nil)
 
-	tmpl.ExecuteTemplate(w)
+	tmpl.ExecuteTemplate(w, "navbar", nil)
+
+	con := L.DemoContent()
+	tmpl.ExecuteTemplate(w, "content", con)
+
+	tmpl.ExecuteTemplate(w, "footer", nil)
 
 	tmpl.ExecuteTemplate(w, "end", nil)
 
