@@ -4,7 +4,7 @@ from flask import Flask, request, redirect
 from twilio.twiml.messaging_response import MessagingResponse
 from twilio.twiml.voice_response import VoiceResponse, Gather
 import sys
-sys.path.append("../../")
+sys.path.append("../")
 from getrandomfromcategory import getRandomFromCategory
 
 app = Flask(__name__)
@@ -71,7 +71,7 @@ def answer_call():
             return(str(resp))
         else:
             resp.say("Sorry, I didn't understand that choice.")
-    gather = Gather(num_digits=1)
+    gather = Gather(numDigits=1)
     gather.say("Thank you for calling space zoo. For a breathing technique, press 1. For an espressive technique, press 2. For a meditation technique, press 3. For a reflection technique, press 4. For a relaxation technique, press 5. For a visualization technique, press 6.")
     resp.append(gather)
     #loop!
