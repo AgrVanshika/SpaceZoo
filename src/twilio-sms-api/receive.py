@@ -1,5 +1,10 @@
+import os
+import psycopg2
 from flask import Flask, request, redirect
 from twilio.twiml.messaging_response import MessagingResponse
+import sys
+sys.path.append("../../")
+from getrandomfromcategory import getRandomFromCategory
 
 app = Flask(__name__)
 
@@ -9,17 +14,23 @@ def sms_reply():
     body = request.values.get('Body', None)
     resp = MessagingResponse()
     if body.lower()[0] == 'b' and 'ing' in body.lower():
-        resp.message("breathing technique incoming!")
+        technique = getRandomFromCategory('breathing')
+        resp.message(f"{technique[0]}: {technique[1]}")
     elif "expression" in body.lower():
-        resp.message("expression technique incoming!")
+        technique = getRandomFromCategory('expression')
+        resp.message(f"{technique[0]}: {technique[1]}")
     elif "meditation" in body.lower():
-        resp.message("meditation technique incoming!")
+        technique = getRandomFromCategory('medication')
+        resp.message(f"{technique[0]}: {technique[1]}")
     elif "reflection" in body.lower():
-        resp.message("reflection technique incoming!")
+        technique = getRandomFromCategory('relaxation')
+        resp.message(f"{technique[0]}: {technique[1]}")
     elif "relaxation" in body.lower():
-        resp.message("relaxation technique incoming!")
+        technique = getRandomFromCategory('relaxation')
+        resp.message(f"{technique[0]}: {technique[1]}")
     elif "visualization" in body.lower():
-        resp.message("visualization technique incoming!")
+        technique = getRandomFromCategory('visualization')
+        resp.message(f"{technique[0]}: {technique[1]}")
     else:
         resp.message("Specify which type of relaxation technique you would like. The available categories are breathing, expression, meditation, reflection, relaxation, and visualization.")
     
