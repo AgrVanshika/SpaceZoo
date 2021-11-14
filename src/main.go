@@ -61,9 +61,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func webserver(port string) {
 	fmt.Printf("Server on port %s\n", port)
 
-	// var fileServer http.Handler
+	fs := http.FileServer(http.Dir("."))
 
-	// http.Handle("/", fileServer)
+	// Puts everything from File Server into a /assets/ directory
+	http.Handle("/assets/", http.StripPrefix("/assets", fs))
 
 	http.HandleFunc("/", handler)
 
