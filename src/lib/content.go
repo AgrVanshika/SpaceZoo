@@ -1,9 +1,9 @@
 package lib
 
 type Content struct {
-	Topic       string
-	Name        string
-	Description string
+	Topic       string // visualization
+	Name        string // Visualization
+	Description string // Relaxing via visualization ....
 }
 
 func DemoContent() Content {

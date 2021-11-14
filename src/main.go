@@ -64,7 +64,10 @@ func mainsite(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "header", nil)
 
-	tmpl.ExecuteTemplate(w, "navbar", nil)
+	tmpl.ExecuteTemplate(w, "startbody", nil)
+
+	navlinks := L.NavBarFill()
+	tmpl.ExecuteTemplate(w, "navbar", navlinks)
 
 	con := L.DemoContent()
 	tmpl.ExecuteTemplate(w, "content", con)
