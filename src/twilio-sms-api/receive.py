@@ -4,7 +4,7 @@ from flask import Flask, request, redirect
 from twilio.twiml.messaging_response import MessagingResponse
 from twilio.twiml.voice_response import VoiceResponse, Gather
 import sys
-sys.path.append("../")
+sys.path.append("../cockroachdb")
 from getrandomfromcategory import getRandomFromCategory
 
 app = Flask(__name__)
