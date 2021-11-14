@@ -20,7 +20,7 @@ def sms_reply():
         technique = getRandomFromCategory('expression')
         resp.message(f"{technique[0]}: {technique[1]}")
     elif "meditation" in body.lower():
-        technique = getRandomFromCategory('medication')
+        technique = getRandomFromCategory('meditation')
         resp.message(f"{technique[0]}: {technique[1]}")
     elif "reflection" in body.lower():
         technique = getRandomFromCategory('relaxation')
