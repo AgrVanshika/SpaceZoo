@@ -34,27 +34,141 @@ meditation
 */
 
 func visualization(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "visualization!")
+	tmpl := template.Must(template.ParseGlob("templates/*.html"))
+
+	tmpl.ExecuteTemplate(w, "start", nil)
+
+	tmpl.ExecuteTemplate(w, "header", nil)
+
+	tmpl.ExecuteTemplate(w, "startbody", nil)
+
+	navlinks := L.NavBarFill()
+	tmpl.ExecuteTemplate(w, "navbar", navlinks)
+
+	tmpl.ExecuteTemplate(w, "startcontain", nil)
+
+	// method
+
+	tmpl.ExecuteTemplate(w, "endcontain", nil)
+
+	tmpl.ExecuteTemplate(w, "footer", nil)
+
+	tmpl.ExecuteTemplate(w, "end", nil)
 }
 
 func relaxation(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "relaxation!")
+	tmpl := template.Must(template.ParseGlob("templates/*.html"))
+
+	tmpl.ExecuteTemplate(w, "start", nil)
+
+	tmpl.ExecuteTemplate(w, "header", nil)
+
+	tmpl.ExecuteTemplate(w, "startbody", nil)
+
+	navlinks := L.NavBarFill()
+	tmpl.ExecuteTemplate(w, "navbar", navlinks)
+
+	tmpl.ExecuteTemplate(w, "startcontain", nil)
+
+	// method
+
+	tmpl.ExecuteTemplate(w, "endcontain", nil)
+
+	tmpl.ExecuteTemplate(w, "footer", nil)
+
+	tmpl.ExecuteTemplate(w, "end", nil)
 }
 
 func reflection(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "reflection!")
+	tmpl := template.Must(template.ParseGlob("templates/*.html"))
+
+	tmpl.ExecuteTemplate(w, "start", nil)
+
+	tmpl.ExecuteTemplate(w, "header", nil)
+
+	tmpl.ExecuteTemplate(w, "startbody", nil)
+
+	navlinks := L.NavBarFill()
+	tmpl.ExecuteTemplate(w, "navbar", navlinks)
+
+	tmpl.ExecuteTemplate(w, "startcontain", nil)
+
+	// method
+
+	tmpl.ExecuteTemplate(w, "endcontain", nil)
+
+	tmpl.ExecuteTemplate(w, "footer", nil)
+
+	tmpl.ExecuteTemplate(w, "end", nil)
 }
 
 func expression(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "expression!")
+	tmpl := template.Must(template.ParseGlob("templates/*.html"))
+
+	tmpl.ExecuteTemplate(w, "start", nil)
+
+	tmpl.ExecuteTemplate(w, "header", nil)
+
+	tmpl.ExecuteTemplate(w, "startbody", nil)
+
+	navlinks := L.NavBarFill()
+	tmpl.ExecuteTemplate(w, "navbar", navlinks)
+
+	tmpl.ExecuteTemplate(w, "startcontain", nil)
+
+	// method
+
+	tmpl.ExecuteTemplate(w, "endcontain", nil)
+
+	tmpl.ExecuteTemplate(w, "footer", nil)
+
+	tmpl.ExecuteTemplate(w, "end", nil)
 }
 
 func breathing(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "breathing!")
+	tmpl := template.Must(template.ParseGlob("templates/*.html"))
+
+	tmpl.ExecuteTemplate(w, "start", nil)
+
+	tmpl.ExecuteTemplate(w, "header", nil)
+
+	tmpl.ExecuteTemplate(w, "startbody", nil)
+
+	navlinks := L.NavBarFill()
+	tmpl.ExecuteTemplate(w, "navbar", navlinks)
+
+	tmpl.ExecuteTemplate(w, "startcontain", nil)
+
+	// method
+
+	tmpl.ExecuteTemplate(w, "endcontain", nil)
+
+	tmpl.ExecuteTemplate(w, "footer", nil)
+
+	tmpl.ExecuteTemplate(w, "end", nil)
 }
 
 func meditation(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "meditation!")
+	tmpl := template.Must(template.ParseGlob("templates/*.html"))
+
+	tmpl.ExecuteTemplate(w, "start", nil)
+
+	tmpl.ExecuteTemplate(w, "header", nil)
+
+	tmpl.ExecuteTemplate(w, "startbody", nil)
+
+	navlinks := L.NavBarFill()
+	tmpl.ExecuteTemplate(w, "navbar", navlinks)
+
+	tmpl.ExecuteTemplate(w, "startcontain", nil)
+
+	// method
+
+	tmpl.ExecuteTemplate(w, "endcontain", nil)
+
+	tmpl.ExecuteTemplate(w, "footer", nil)
+
+	tmpl.ExecuteTemplate(w, "end", nil)
 }
 
 func mainsite(w http.ResponseWriter, r *http.Request) {
@@ -69,13 +183,16 @@ func mainsite(w http.ResponseWriter, r *http.Request) {
 	navlinks := L.NavBarFill()
 	tmpl.ExecuteTemplate(w, "navbar", navlinks)
 
+	tmpl.ExecuteTemplate(w, "startcontain", nil)
+
 	con := L.DemoContent()
 	tmpl.ExecuteTemplate(w, "content", con)
+
+	tmpl.ExecuteTemplate(w, "endcontain", nil)
 
 	tmpl.ExecuteTemplate(w, "footer", nil)
 
 	tmpl.ExecuteTemplate(w, "end", nil)
-
 }
 
 func webserver(port string) {

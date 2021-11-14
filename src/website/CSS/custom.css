@@ -5,7 +5,11 @@
     /* min-height: calc(100vh - 211px - 58px);*/
 }
 
-
+.foot-img {
+    padding: 8px 15px 5 px 15px;
+    height: 30px;
+    text-align: center;
+}
 
 footer {
     background-color:#222;
