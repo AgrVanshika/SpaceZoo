@@ -7,14 +7,41 @@ client = Client(ACCOUNT, TOKEN)
 
 # func send_sms(to, from, message)
 
-message = client.messages \
-                .create(
+def send_sms(to, from_, message):
+    message = client.messages.create(
                      body="SpaceZoo.tech",
                      from_='+15155178952',
-                     to='+1'
+                     to='+19739807798'
                  )
-
+    return message
+send_sms('+19739807798','+15155178952',"SpaceZoo.tech")
+'''{ 
+    "account_sid": ACCOUNT,
+    "api_version": "2010-04-01",
+    "body": message,
+    "date_created": "Thu, 13  2015 20:12:31 +0000",
+    "date_sent": "Thu, 30 Jul 2015 20:12:33 +0000",
+    "date_updated": "Thu, 30 Jul 2015 20:12:33 +0000",
+    "direction": "outbound-api",
+    "error_code": null,
+    "error_message": null,
+    "from": from_,
+    "messaging_service_sid": "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "num_media": "0",
+    "num_segments": "1",
+    "price": null,
+    "price_unit": null,
+    "sid": "SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "status": "sent",
+    "subresource_uris": {
+        "media": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Media.json"
+        },
+    "to": to,
+    "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.json"
+        }
 print(message.sid)
+send_sms('+19739807798','+15155178952',"SpaceZoo.tech")'''
+
 
 # https://www.twilio.com/code-exchange/send-sms-message-twilio-phone-number
 # https://www.twilio.com/docs/sms/quickstart/python
