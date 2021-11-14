@@ -1,7 +1,9 @@
 {{block "method" .}}
+{{range .}}
 <h1>{{.Name}}</h1>
 <img src = "/assets/website/img/{{.Topic}}.png" width = '300' height = "240"
     alt = "{{.Name}}" title = "{{.Name}}." style="float : left; margin-right : 10px;margin-bottom:5px; border : solid black 1px; padding: 2px" />
 <p>{{.Description}}</p> 
 <p>{{.Source}}</p>
+{{end}}
 {{end}}

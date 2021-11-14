@@ -35,7 +35,12 @@ func visualization(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "startcontain", nil)
 
-	// method
+	tmpl.ExecuteTemplate(w, "startcontent", nil)
+
+	techniques := L.ListMethods("visualization")
+	tmpl.ExecuteTemplate(w, "method", techniques)
+
+	tmpl.ExecuteTemplate(w, "endcontent", nil)
 
 	tmpl.ExecuteTemplate(w, "endcontain", nil)
 
@@ -58,7 +63,12 @@ func relaxation(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "startcontain", nil)
 
-	// method
+	tmpl.ExecuteTemplate(w, "startcontent", nil)
+
+	techniques := L.ListMethods("relaxation")
+	tmpl.ExecuteTemplate(w, "method", techniques)
+
+	tmpl.ExecuteTemplate(w, "endcontent", nil)
 
 	tmpl.ExecuteTemplate(w, "endcontain", nil)
 
@@ -81,7 +91,12 @@ func reflection(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "startcontain", nil)
 
-	// method
+	tmpl.ExecuteTemplate(w, "startcontent", nil)
+
+	techniques := L.ListMethods("reflection")
+	tmpl.ExecuteTemplate(w, "method", techniques)
+
+	tmpl.ExecuteTemplate(w, "endcontent", nil)
 
 	tmpl.ExecuteTemplate(w, "endcontain", nil)
 
@@ -104,7 +119,12 @@ func expression(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "startcontain", nil)
 
-	// method
+	tmpl.ExecuteTemplate(w, "startcontent", nil)
+
+	techniques := L.ListMethods("expression")
+	tmpl.ExecuteTemplate(w, "method", techniques)
+
+	tmpl.ExecuteTemplate(w, "endcontent", nil)
 
 	tmpl.ExecuteTemplate(w, "endcontain", nil)
 
@@ -127,7 +147,12 @@ func breathing(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "startcontain", nil)
 
-	// method
+	tmpl.ExecuteTemplate(w, "startcontent", nil)
+
+	techniques := L.ListMethods("breathing")
+	tmpl.ExecuteTemplate(w, "method", techniques)
+
+	tmpl.ExecuteTemplate(w, "endcontent", nil)
 
 	tmpl.ExecuteTemplate(w, "endcontain", nil)
 
@@ -150,7 +175,12 @@ func meditation(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "startcontain", nil)
 
-	// method
+	tmpl.ExecuteTemplate(w, "startcontent", nil)
+
+	techniques := L.ListMethods("meditation")
+	tmpl.ExecuteTemplate(w, "method", techniques)
+
+	tmpl.ExecuteTemplate(w, "endcontent", nil)
 
 	tmpl.ExecuteTemplate(w, "endcontain", nil)
 
@@ -173,8 +203,12 @@ func mainsite(w http.ResponseWriter, r *http.Request) {
 
 	tmpl.ExecuteTemplate(w, "startcontain", nil)
 
-	con := L.DemoContent()
+	tmpl.ExecuteTemplate(w, "startcontent", nil)
+
+	con := L.FillContent()
 	tmpl.ExecuteTemplate(w, "content", con)
+
+	tmpl.ExecuteTemplate(w, "endcontain", nil)
 
 	tmpl.ExecuteTemplate(w, "endcontain", nil)
 
@@ -208,8 +242,6 @@ func webserver(port string) {
 func main() {
 
 	port := strconv.Itoa(PORT)
-
-	L.GetRandomFromCategory("breathing")
 
 	webserver(port)
 }

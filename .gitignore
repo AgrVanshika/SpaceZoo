@@ -6,7 +6,7 @@ Scripts/
 pyvenv.cfg
 
 creds.py
-creds-*
+creds*
 cockroachcreds.py
 
 # For Golang Windows Executables
