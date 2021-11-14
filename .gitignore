@@ -1,6 +1,7 @@
 __pycache__
 creds.py
 creds-*
+cockroachcreds.py
 
 # For Golang Windows Executables
 main.exe
