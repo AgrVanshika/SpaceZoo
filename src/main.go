@@ -209,5 +209,7 @@ func main() {
 
 	port := strconv.Itoa(PORT)
 
+	L.GetRandomFromCategory("breathing")
+
 	webserver(port)
 }
