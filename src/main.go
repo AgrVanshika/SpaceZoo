@@ -9,6 +9,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+	"text/template"
 )
 
 const PORT = 9990
@@ -54,8 +55,15 @@ func meditation(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "meditation!")
 }
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello!")
+func mainsite(w http.ResponseWriter, r *http.Request) {
+	tmpl := template.Must(template.ParseGlob("templates/*.html"))
+
+	tmpl.ExecuteTemplate(w, "start", nil)
+
+	tmpl.ExecuteTemplate(w, "header", nil)
+
+	tmpl.ExecuteTemplate(w, "end", nil)
+
 }
 
 func webserver(port string) {
@@ -66,7 +74,7 @@ func webserver(port string) {
 	// Puts everything from File Server into a /assets/ directory
 	http.Handle("/assets/", http.StripPrefix("/assets", fs))
 
-	http.HandleFunc("/", handler)
+	http.HandleFunc("/", mainsite)
 
 	http.HandleFunc("/visualization", visualization)
 	http.HandleFunc("/relaxation", relaxation)
