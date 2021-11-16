@@ -32,6 +32,12 @@ A zoo / collection to get you in the right head space
 
 
 ## :round_pushpin: Goal
+We took the words space and zoo and we put then very liberally.
+Inspired by theZoo, we took zoo as a collection of things
+and Space to me some good space thing.
+
+Thus the aggamalation became a resource for mental health and general wellbeing
+
 
 
 ## :computer: Technical Details
@@ -48,7 +54,10 @@ A zoo / collection to get you in the right head space
 ## :hammer: Technology & Tools
 | Technology / Tools | Reason
 | :----------------- | :-----
+| [Domain.com](domain.com) | Domain Name Server
+| [GCP - Google Cloud Platform]() | Compute Engine to host Server
 | 
+
 
 ## :camera: Pictures / Screenshots
 
