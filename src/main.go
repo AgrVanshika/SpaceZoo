@@ -240,7 +240,7 @@ func webserver(port string) {
 	http.HandleFunc("/breathing", breathing)
 	http.HandleFunc("/meditation", meditation)
 
-	http.HandleFunc("/amongus")
+	http.HandleFunc("/amongus", amongus)
 
 	err := http.ListenAndServe(":"+port, nil)
 
