@@ -21,9 +21,9 @@ A zoo / collection to get you in the right head space
 
 ## :diamond_shape_with_a_dot_inside: Status
 <div align="center">
-    <a href="https://github.com/AOrps/spaceZoo/actions/workflows/go.yml">
+   <!--- <a href="https://github.com/AOrps/spaceZoo/actions/workflows/go.yml">
         <img alt="Go" src="https://github.com/AOrps/spaceZoo/actions/workflows/go.yml/badge.svg" />
-    </a>
+    </a> --->
         <a href="https://devpost.com/software/spacezoo">
         <img alt="HackNJIT 2021" src="https://img.shields.io/badge/HackNJIT%202021-Winner-yellow" />
     </a>
