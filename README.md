@@ -1,6 +1,6 @@
-<p align="center" id="start">
+<!-- <p align="center" id="start">
     <img src="https://raw.githubusercontent.com/AOrps/spaceZoo/main/img/spacezoo-focused-logo.png" alt="spaceZoo logo" data-canonical-src="" width="400">
-</p>
+</p> -->
 
 # :rocket: spaceZoo :koala:
 A zoo / collection to get you in the right head space
