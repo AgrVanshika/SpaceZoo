@@ -54,8 +54,7 @@ Thus the aggamalation became a resource for mental health and general wellbeing
 | Technology / Tools | Reason
 | :----------------- | :-----
 | [Domain.com](domain.com) | Domain Name Server
-| [GCP - Google Cloud Platform]() | Compute Engine to host Server
-| 
+| [GCP - Google Cloud Platform]() | Compute Engine to host Server 
 
 
 ## :camera: Pictures / Screenshots
