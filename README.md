@@ -60,3 +60,9 @@ Thus the aggamalation became a resource for mental health and general wellbeing
 
 ## :bookmark: License
 Code released under the [MIT License](LICENSE) 
+
+### Contributers:
+- Andres Orbe
+- Saketh Puramsetti
+- Vanshika Agrawal
+- Trent Mauser
