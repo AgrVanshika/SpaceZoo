@@ -57,8 +57,6 @@ Thus the aggamalation became a resource for mental health and general wellbeing
 | [GCP - Google Cloud Platform]() | Compute Engine to host Server 
 
 
-## :camera: Pictures / Screenshots
-
 
 ## :bookmark: License
 Code released under the [MIT License](LICENSE) 
