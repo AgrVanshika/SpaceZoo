@@ -17,7 +17,6 @@ A zoo / collection to get you in the right head space
 
 ## :link: Quick Start
 - Clone the repo: `git clone https://github.com/AgrVanshika/SpaceZoo.git`
-- 
 
 
 ## :diamond_shape_with_a_dot_inside: Status
