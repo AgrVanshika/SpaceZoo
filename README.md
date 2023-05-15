@@ -16,7 +16,7 @@ A zoo / collection to get you in the right head space
 - [License](#license)
 
 ## :link: Quick Start
-- Clone the repo: `git clone https://github.com/AOrps/spaceZoo.git`
+- Clone the repo: `git clone https://github.com/AgrVanshika/SpaceZoo.git`
 - 
 
 
